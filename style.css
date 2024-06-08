@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+section{
+    /* width: 65%; */
+    max-width: 60rem;
+    margin: auto;
+    display: flex;
+}
+
+section .image{
+    width: 55%;
+}
+
+.image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+section form{
+    width: 45%;
+    background-color: rgb(19, 19, 19);
+    padding: 4.5rem 3rem;
+}
+
+form h1{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+}
+
+form .input-select{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: aqua;
+    margin: 1.3rem 0;
+}
+
+.input-select input{
+    border: 0;
+    background-color: rgb(19, 19, 19);
+    border-bottom: 1px solid white;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.input-select label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    font-size: 15px;
+    cursor: text;
+    color: whitesmoke;
+
+}
+
+input:focus + label{
+    color: rgb(255, 193, 118);
+    top: -1rem;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+input:focus{
+    border-bottom: 1px solid rgb(226, 164, 88);
+}
+
+.input-select select{
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    background-color: rgb(19, 19, 19);
+    border: none;
+    border-bottom: 1px solid white;
+    color: whitesmoke;
+}
+
+form h2{
+    font-size: 15px;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: whitesmoke;
+}
+
+form .place{
+    display: flex;
+    gap: 7px;
+}
+
+.place .number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: whitesmoke;
+}
+
+.place .number-special{
+    width: 90px;
+    gap: 5px;
+    background-color: rgb(226, 164, 88);
+}
+
+.place .number-special span{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+form button{
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: rgb(226, 164, 88);
+    color: white;
+}
+
+form p{
+    color: rgb(226, 164, 88);
+}
+
+@media (max-width: 800px){
+    section{
+        flex-direction: column;
+    }
+
+    section .image{
+        width: 100%;
+    }
+
+    section form{
+        width: 100%;
+    }
+}
